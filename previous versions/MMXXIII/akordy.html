@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kolędy Pawiłojć</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="EncodeSansExpanded-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+  </head>
+  <body>
+    <div id="intro">
+      <h1>Kolędy</h1>
+      <h4>Pawiłojć</h4>
+      <h5>MMXXI</h5>
+      <hr />
+      <table>
+        <tr>
+          <td>
+            <a href="Koledy.ppsx"
+              ><img src="ppsx.jpg" alt="ppsx" width="120"
+            /></a>
+            <br />
+            <a href="Koledy.ppsx">Pokaz slajdów </a><br />
+            <a href="Koledy.ppsx">programu PowerPoint</a>
+          </td>
+          <td>
+            <a href="Koledy.pdf"><img src="pdf.jpg" alt="pdf" width="120" /></a
+            ><br />
+            <a href="Koledy.pdf">Dokument PDF</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#koledy_pawilojc"
+              ><img src="ie.jpg" alt="ie" width="120" /></a
+            ><br />
+            <a href="#koledy_pawilojc">Strona w przeglądarce</a>
+          </td>
+          <td>
+            <a href="Koledy_chwyty.epub"
+              ><img src="kindle.jpg" alt="kindle" width="120" /></a
+            ><br />
+            <a href="Koledy_chwyty.epub">Chwyty na czytnik</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="index.html#koledy_pawilojc"
+              ><img src="teksty.jpg" alt="teksty" width="120" /></a
+            ><br />
+            <a href="index.html#koledy_pawilojc">Wróć do tekstów</a>
+          </td>
+          <td>
+            <a
+              href="wroclawski_spiewnik_koled.pdf"
+              ><img src="wroclove.jpg" alt="wroclove" width="120" /></a
+            ><br>
+           
+            <a
+              href="wroclawski_spiewnik_koled.pdf"
+              >Wrocławski śpiewnik kolęd <br>(z nutami)</a
+            >
+          </td>
+        </tr>
+      </table>
+
+      <br /><br />
+
+      <hr />
+    </div>
+
+    <div id="a_wczora_z_wieczora">
+      <h2>A wczora z wieczora</h2>
+      <p id="1">ADEA | ADhE AfishEA</p>
+      <button onclick="transposeUp(1)">🔼</button>
+      <button onclick="transposeDown(1)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="ach_ubogi_zlobie">
+      <h2>Ach ubogi żłobie</h2>
+      <p id="2">CG CFG | GCGa GCGC</p>
+      <button onclick="transposeUp(2)">🔼</button>
+      <button onclick="transposeDown(2)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="aniol_pasterzom_mowil">
+      <h2>Anioł pasterzom mówił</h2>
+      <p id="3">DA DAD DGE7A | DG DGDA DGDA DGAD</p>
+      <button onclick="transposeUp(3)">🔼</button>
+      <button onclick="transposeDown(3)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="Bog_sie_rodzi">
+      <h2>Bóg się rodzi</h2>
+      <p id="4">ADEAE | hEAfis</p>
+      <button onclick="transposeUp(4)">🔼</button>
+      <button onclick="transposeDown(4)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="bracia_patrzcie_jeno">
+      <h2>Bracia patrzcie jeno</h2>
+      <p id="5">GCG | DGDGDGD GCGCGDG eDG</p>
+      <button onclick="transposeUp(5)">🔼</button>
+      <button onclick="transposeDown(5)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="cicha_noc">
+      <h2>Cicha noc</h2>
+      <p id="6">AfisAfis E A A7 DAfis EAfis AEA</p>
+      <button onclick="transposeUp(6)">🔼</button>
+      <button onclick="transposeDown(6)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="dlaczego_dzisiaj">
+      <h2>Dlaczego dzisiaj wśród nocy dnieje</h2>
+      <p id="7">C G G C | CFFC adGC</p>
+      <button onclick="transposeUp(7)">🔼</button>
+      <button onclick="transposeDown(7)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="do_szopy_hej_pasterze">
+      <h2>Do szopy hej pasterze</h2>
+      <p id="8">DAAD | DeAD heAD</p>
+      <button onclick="transposeUp(8)">🔼</button>
+      <button onclick="transposeDown(8)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="dzisiaj_w_Betlejem">
+      <h2>Dzisiaj w Betlejem</h2>
+      <p id="9">F BFC CFCF F DgCF</p>
+      <button onclick="transposeUp(9)">🔼</button>
+      <button onclick="transposeDown(9)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="Emmanuel_Bozy_Syn">
+      <h2>Emmanuel Boży Syn</h2>
+      <p id="10">GCDC | GaCD | ahCD ahCH</p>
+      <button onclick="transposeUp(10)">🔼</button>
+      <button onclick="transposeDown(10)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="feliz_Navidad">
+      <h2>Feliz Navidad</h2>
+      <p id="34">CDGe CDG</p>
+      <button onclick="transposeUp(34)">🔼</button>
+      <button onclick="transposeDown(34)">🔽</button>
+      <hr />
+    </div>
+    <div id="gdy_sie_Chrystus_rodzi">
+      <h2>Gdy się Chrystus rodzi</h2>
+      <p id="11">CFFC AdGC | GCGC CFE CFCGC</p>
+      <button onclick="transposeUp(11)">🔼</button>
+      <button onclick="transposeDown(11)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="gdy_sliczna_Panna">
+      <h2>Gdy śliczna Panna</h2>
+      <p id="12">EAHE fisHHE | cisfisHAE cisAaEfisHE</p>
+      <button onclick="transposeUp(12)">🔼</button>
+      <button onclick="transposeDown(12)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="gore_gwiazda">
+      <h2>Gore gwiazda</h2>
+      <p id="35">dFAA7 | FCFC7 AA7d</p>
+      <button onclick="transposeUp(35)">🔼</button>
+      <button onclick="transposeDown(35)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="hej_w_dzien_narodzenia">
+      <h2>Hej w dzień narodzenia</h2>
+      <p id="13">DG | GDA D</p>
+      <button onclick="transposeUp(13)">🔼</button>
+      <button onclick="transposeDown(13)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="Jezu_sliczny_kwiecie">
+      <h2>Jezu śliczny kwiecie</h2>
+      <p id="14">DGAD | DfisGA DeADA</p>
+      <button onclick="transposeUp(14)">🔼</button>
+      <button onclick="transposeDown(14)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="Jezus_malusienki">
+      <h2>Jezus malusieńki</h2>
+      <p id="15">ae GCGa</p>
+      <button onclick="transposeUp(15)">🔼</button>
+      <button onclick="transposeDown(15)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="Jezusa_narodzonego">
+      <h2>Jezusa narodzonego</h2>
+      <p id="16">DGDAD | DGeA hGDAD</p>
+      <button onclick="transposeUp(16)">🔼</button>
+      <button onclick="transposeDown(16)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="lulajze_Jezuniu">
+      <h2>Lulajże Jezuniu</h2>
+      <p id="17">DeAD heAD | DGAD heAD</p>
+      <button onclick="transposeUp(17)">🔼</button>
+      <button onclick="transposeDown(17)">🔽</button>
+
+      <hr />
+    </div>
+
+    <div id="medrcy_swiata">
+      <h2>Mędrcy świata</h2>
+      <p id="18">CFAdGC CFG7edGC | GCGCCG CFH7edGC</p>
+      <button onclick="transposeUp(18)">🔼</button>
+      <button onclick="transposeDown(18)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="mizerna_cicha">
+      <h2>Mizerna cicha</h2>
+      <p id="19">eaeHeH eaeHeae</p>
+      <button onclick="transposeUp(19)">🔼</button>
+      <button onclick="transposeDown(19)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="nie_bylo_miejsca_dla_Ciebie">
+      <h2>Nie było miejsca dla Ciebie</h2>
+      <p id="20">eHHE | eGDHe eHHe</p>
+      <button onclick="transposeUp(20)">🔼</button>
+      <button onclick="transposeDown(20)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="nowy_rok_biezy">
+      <h2>Nowy Rok bieży</h2>
+      <p id="21">DADGA | DhGADAD</p>
+      <button onclick="transposeUp(21)">🔼</button>
+      <button onclick="transposeDown(21)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="o_gwiazdo_betlejemska">
+      <h2>O gwiazdo betlejemska</h2>
+      <p id="22">FCFD7 gCF | dA7dBA gCFD7 gCF</p>
+      <button onclick="transposeUp(22)">🔼</button>
+      <button onclick="transposeDown(22)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="oj_maluski">
+      <h2>Oj maluśki</h2>
+      <p id="23">G GD D aDG | eGDG</p>
+      <button onclick="transposeUp(23)">🔼</button>
+      <button onclick="transposeDown(23)">🔽</button>
+
+      <hr />
+    </div>
+
+    <div id="pasterze_mili_coscie_widzieli">
+      <h2>Pasterze mili coście widzieli</h2>
+      <p id="24">DG DAD | AheaD GAD eAD</p>
+      <button onclick="transposeUp(24)">🔼</button>
+      <button onclick="transposeDown(24)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="pojdxmy_wszyscy_do_stajenki">
+      <h2>Pójdźmy wszyscy do stajenki</h2>
+      <p id="25">A DEAfis EA</p>
+      <button onclick="transposeUp(25)">🔼</button>
+      <button onclick="transposeDown(25)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="przybiezeli_do_Betlejem">
+      <h2>Przybieżeli do Betlejem</h2>
+      <p id="26">E EAE | EAH EAE EHE</p>
+      <button onclick="transposeUp(26)">🔼</button>
+      <button onclick="transposeDown(26)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="swiec_gwiazdeczko">
+      <h2>Świeć gwiazdeczko</h2>
+      <p id="27">hADh hA | D GA G AD</p>
+      <button onclick="transposeUp(27)">🔼</button>
+      <button onclick="transposeDown(27)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="tryumfy">
+      <h2>Tryumfy</h2>
+      <p id="28">GGDG | D DGD</p>
+      <button onclick="transposeUp(28)">🔼</button>
+      <button onclick="transposeDown(28)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="w_dzien_Bozego_Narodzenia">
+      <h2>W dzień Bożego Narodzenia</h2>
+      <p id="29">FC FF | FD7gC FdC CF</p>
+      <button onclick="transposeUp(29)">🔼</button>
+      <button onclick="transposeDown(29)">🔽</button>
+
+      <hr />
+    </div>
+
+    <div id="w_zlobie_lezy">
+      <h2>W żłobie leży</h2>
+      <p id="30">DA DGAD | DheAD DGAD</p>
+      <button onclick="transposeUp(30)">🔼</button>
+      <button onclick="transposeDown(30)">🔽</button>
+
+      <hr />
+    </div>
+
+    <div id="wesola_nowine">
+      <h2>Wesołą nowinę</h2>
+      <p id="31">CdGC adGC | CFGC adGC</p>
+      <button onclick="transposeUp(31)">🔼</button>
+      <button onclick="transposeDown(31)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="wsrod_nocnej_ciszy">
+      <h2>Wśród nocnej ciszy</h2>
+      <p id="32">DeADA DGAD | DGA DAD</p>
+      <button onclick="transposeUp(32)">🔼</button>
+      <button onclick="transposeDown(32)">🔽</button>
+
+      <hr />
+    </div>
+    <div id="z_narodzenia_Pana">
+      <h2>Z narodzenia Pana</h2>
+      <p id="33">CFCFCGC</p>
+      <button onclick="transposeUp(33)">🔼</button>
+      <button onclick="transposeDown(33)">🔽</button>
+
+      <hr />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
