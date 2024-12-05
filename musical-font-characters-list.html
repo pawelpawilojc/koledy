@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nuty</title>
+
         <style>
             body {
                 font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
@@ -11,26 +12,30 @@
                 margin: 20px;
             }
             .container {
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
                 gap: 10px;
             }
             .pair {
                 display: flex;
                 flex-direction: column;
+                text-align: center;
+                border: 1px solid #ccc;
+                padding: 10px;
+                background-color: #f9f9f9;
             }
             .normal-font,
             .test-font {
                 padding: 5px;
-                border: 1px solid #ccc;
-                margin-bottom: 5px;
             }
             .normal-font {
-                font-family: Arial, sans-serif;
+                font-family: Cambria, Cochin, Georgia, Times, "Times New Roman";
+                font-size: 2em;
                 background-color: #f0f0f0;
             }
             .test-font {
                 font-family: "MusiQwik";
+                font-size: 5em;
                 background-color: #e0ffe0;
             }
         </style>
@@ -42,22 +47,22 @@
     <script>
         const container = document.querySelector(".container");
         const characters =
-            "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^-_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòòóôõŽžƒˆ˜–—‘’‚“”„†‡•…‰‹›€™";
+            "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^-_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòòóôõŽžƒˆ˜–—‘’‚“”„†‡•…‰‹›€™";
 
         characters.split("").forEach((char) => {
             const pair = document.createElement("div");
             pair.className = "pair";
 
-            const normalDiv = document.createElement("div");
-            normalDiv.className = "normal-font";
-            normalDiv.textContent = char;
-
             const testDiv = document.createElement("div");
             testDiv.className = "test-font";
             testDiv.textContent = char;
 
-            pair.appendChild(normalDiv);
+            const normalDiv = document.createElement("div");
+            normalDiv.className = "normal-font";
+            normalDiv.textContent = char;
+
             pair.appendChild(testDiv);
+            pair.appendChild(normalDiv);
             container.appendChild(pair);
         });
     </script>
