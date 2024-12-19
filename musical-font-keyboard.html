@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nuty</title>
+
+        <style>
+            body {
+                font-family: Cambria, Cochin, Georgia, Times, "Times New Roman",
+                    serif;
+                margin: 20px;
+            }
+            .keyboard {
+                margin-top: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #f0f0f0;
+            }
+            .category-buttons {
+                margin-bottom: 10px;
+            }
+            .category-buttons button {
+                font-family: Cambria, Cochin, Georgia, Times, "Times New Roman" !important;
+                font-size: 1em;
+                margin: 5px;
+                padding: 10px;
+                border: none;
+                background-color: #e0e0ff;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .category-buttons button:hover {
+                background-color: #d0d0ff;
+            }
+            .keyboard button {
+                font-family: "MusiQwik";
+                font-size: 2em;
+                margin: 5px;
+                padding: 10px;
+                border: none;
+                background-color: #e0ffe0;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .keyboard button:hover {
+                background-color: #d0ffd0;
+            }
+            .input-area {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-output {
+                width: 100%;
+                max-width: 600px;
+                font-size: 2em;
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+            }
+            .music-output {
+                font-family: "MusiQwik";
+                font-size: 2em;
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                background-color: #e0ffe0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Klawiatura czcionki muzycznej</h1>
+
+        <div class="keyboard">
+            <div class="category-buttons">
+                <button onclick="switchCategory('wszystko')">wszystko</button>
+                <button onclick="switchCategory('takt')">takt</button>
+                <button onclick="switchCategory('metrum')">metrum</button>
+                <button onclick="switchCategory('znaki')">znaki</button>
+                <button onclick="backspace()">Backspace</button>
+            </div>
+            <div id="keyboard-buttons"></div>
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="text-output"
+                    class="text-output"
+                    placeholder=""
+                    readonly
+                />
+                <div
+                    id="music-output"
+                    class="music-output"
+                    placeholder=""
+                ></div>
+            </div>
+        </div>
+
+        <script>
+            const categories = {
+                takt: "'=!\"().-",
+                metrum: "07123456",
+                znaki: "",
+                wszystko:
+                    "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^-_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòòóôõŽžƒˆ˜–—‘’‚“”„†‡•…‰‹›€™",
+            };
+
+            const switchCategory = (category) => {
+                const keyboard = document.getElementById("keyboard-buttons");
+                keyboard.innerHTML = "";
+                categories[category].split("").forEach((char) => {
+                    const button = document.createElement("button");
+                    button.textContent = char;
+                    button.onclick = () => {
+                        const textOutput =
+                            document.getElementById("text-output");
+                        const musicOutput =
+                            document.getElementById("music-output");
+                        textOutput.value += char;
+                        musicOutput.textContent += char;
+                    };
+                    keyboard.appendChild(button);
+                });
+            };
+
+            const backspace = () => {
+                const textOutput = document.getElementById("text-output");
+                const musicOutput = document.getElementById("music-output");
+                textOutput.value = textOutput.value.slice(0, -1);
+                musicOutput.textContent = musicOutput.textContent.slice(0, -1);
+            };
+
+            switchCategory("wszystko");
+        </script>
+    </body>
+</html>
