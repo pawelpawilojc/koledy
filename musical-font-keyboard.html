@@ -78,8 +78,12 @@
             <div class="category-buttons">
                 <button onclick="switchCategory('wszystko')">wszystko</button>
                 <button onclick="switchCategory('takt')">takt</button>
+                <button onclick="switchCategory('klucz')">klucz</button>
                 <button onclick="switchCategory('metrum')">metrum</button>
-                <button onclick="switchCategory('znaki')">znaki</button>
+                <button onclick="switchCategory('krzyzyki')">krzyżyki</button>
+                <button onclick="switchCategory('bemole')">bemole</button>
+                <button onclick="switchCategory('kasowniki')">kasowniki</button>
+                <button onclick="switchCategory('cale')">całe nuty</button>
                 <button onclick="backspace()">Backspace</button>
             </div>
             <div id="keyboard-buttons"></div>
@@ -103,7 +107,11 @@
             const categories = {
                 takt: "'=!\"().-",
                 metrum: "07123456",
-                znaki: "",
+                klucz: "&¯¡¢£¤¥¦§¨©ª«¬€®",
+                krzyzyki: "ÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞ",
+                bemole: "àáâãäåæçèéêëìíî",
+                kasowniki: "ðñòóôõö÷øùúûüýþ",
+                cale: "–—pqrstuvwxyz{|}~",
                 wszystko:
                     "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^-_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòòóôõŽžƒˆ˜–—‘’‚“”„†‡•…‰‹›€™",
             };
